@@ -1,0 +1,305 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    font-family: 'Poppins',sans-serif;
+    overflow: hidden;
+}
+
+.main-container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #272536;
+}
+
+.container{
+  width: 33%;
+  /* border: 2px solid #fff; */
+}
+
+.container .container-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 100%;
+}
+
+.container .container-grid >*{
+  width: inherit;
+  height: 55px;
+}
+
+.container .container-grid > :nth-child(3){
+  display: block;
+  width: 100%;
+}
+
+.container .container-grid > :nth-child(3) .numbers{
+  width: 60%;
+  height: 25px;
+  /* border: 2px solid #000; */
+  margin-left: 50px;
+  text-align: center;
+  font-size: 18px;
+  color: #fff;
+}
+
+
+.container .container-grid > :nth-child(3) .buttons{
+   width: 60%;
+  height: 25px;
+  background: #16161a;
+  margin-left: 50px;
+  border-radius: 40px;
+}
+
+
+.container .container-grid > :nth-child(1){
+  text-align: center;
+  align-items: center;
+  padding-top: 5px;
+  font-size: 2rem;
+  color: #fff;
+}
+
+
+.container .container-grid > :nth-child(2){
+  text-align: center;
+  align-items: center;
+  padding-top: 20px;
+  font-size: 0.9rem;
+  color: #fff;
+  font-weight: bold;
+  padding-left: 90px;
+  margin-left: 40px;
+}
+
+.container .container-grid > :nth-child(3) .numbers label{
+  margin-right: 5px;
+}
+
+.container .container-grid :nth-child(3) .buttons{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+}
+
+.container .container-grid :nth-child(3) .buttons >*{
+  width: 100%;
+  height: 20px;
+  border-radius: 50%;
+  margin-right: 3px;
+  border: none;
+  outline: none;
+}
+
+.container .container-grid :nth-child(3) .buttons > :nth-child(1){
+  background: orangered;
+}
+
+.container .container-grid{
+  margin-bottom: 5px;
+}
+
+.container .board{
+  width: 100%;
+  background: #242425;
+  padding: 14px;
+  color: #fff;
+  text-align: right;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  height: 100px;
+}
+
+.container .board .input{
+  font-size: 25px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.container .board .output{
+  margin-right: 10px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.container .calculator-button >* :hover{
+  box-shadow: 0px 5px 0px rgba(0, 0, 0, 0.6);
+}
+
+.container .calculator-button {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 15px;
+  gap: 10px
+  ;
+  background: #242425;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.container .buttons > :nth-child(2){
+  background: inherit;
+}
+
+.container .buttons > :nth-child(3){
+  background: inherit;
+}
+
+.container .calculator-button >*{
+  padding: 20px 8px;
+  border-radius: 10px;
+  font-size: 20px;
+  border: none;
+  outline: none;
+  font-weight: bold;
+}
+
+.container .calculator-button >:nth-child(4){
+  background: skyblue;
+  color: #fff;
+}
+
+.container .last-btn{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px
+  ;
+  padding: 15px;
+  background: #242425;
+}
+
+.container .last-btn>*{
+  padding: 10px;
+  font-size: inherit;
+  font-weight: bold;  
+  border-radius: 10px;
+  border: none;
+  outline: none;
+}
+
+.container .last-btn > :nth-child(1){
+  background: skyblue;
+  color: #fff;
+}
+
+.container .last-btn > :nth-child(2){
+  background: rgb(250, 103, 50);
+  color: #fff;
+}
+
+.container .last-btn>*:hover{
+  box-shadow: 0px 5px 0px rgba(0, 0, 0, 0.6);
+}
+
+.active{
+  box-shadow: 0px 5px 0px hsl(268, 78%, 23%);
+}
+
+.working{
+  box-shadow: 0px 5px 0px rgba(0, 0, 0, 0.3);
+}
+
+
+
+
+@media only screen and (min-width: 1400px) and (max-width: 2000px) {
+  .main-container .container{
+    width: 40%;
+  }
+}
+
+@media only screen and (max-width: 1217px){
+  .main-container{
+    width: 100%;
+    margin: 1px;
+  }
+  .main-container .container{
+    width: 40%;
+  }
+}
+
+@media only screen and (max-width: 970px){
+  .main-container{
+    width: 100%;
+  }
+  .main-container .container{
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 790px){
+  .main-container{
+    width: 100%;
+  }
+  .main-container .container{
+    width: 60%;
+  }
+}
+
+@media only screen and (max-width: 663px){
+  .main-container{
+    width: 100%;
+  }
+  .main-container .container{
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 550px){
+  .main-container{
+    width: 100%;
+  }
+  .main-container .container{
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 490px){
+  .main-container{
+    width: 100%;
+    margin: 1%;
+  }
+  .main-container .container{
+    width: 100%;
+  }
+
+}
+
+@media only screen and (max-width: 375px){
+  .main-container .container .board{
+    width: 90%;
+  }
+
+  .main-container .container .board{
+    margin: auto;
+    margin-bottom: 20px;
+  }
+
+  .main-container .container .container-grid{
+    width: 90%;
+  }
+
+  .main-container .container .calculator-button{
+    width: 90%;
+    margin: auto;
+  }
+
+  .main-container .container .last-btn{
+    width: 90%;
+    margin: auto;
+  }
+}
+
+
+
